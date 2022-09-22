@@ -33,7 +33,7 @@ namespace beziercurve
             //2 points with TWO control Points means Qubic
             // Mathematical Formula of Qubic Curves
             //B(t) = (1-t)3P0 + 3(1-t)2tP1 + 3(1-t)t2P2 + t3P3 , 0 < t< 1  
-            Vector3 res = ((1 - t) * (1 - t) * (1 - t) * pos0) + (3 * (1 - t) * (1 - t) * t * pos1) + (3 * (1 - t) * (1 - t) * t * pos2) + (t * t * t * pos3);
+            Vector3 res = ((1 - t) * (1 - t) * (1 - t) * pos0) + (3 * (1 - t) * (1 - t) * t * pos1) + (3 * (1 - t) * t * t * pos2) + (t * t * t * pos3);
 
             return res;
         }
@@ -42,7 +42,7 @@ namespace beziercurve
         {
             // Mathematical Formula of Qubic Curves
             //B(t) = (1-t)3P0 + 3(1-t)2tP1 + 3(1-t)t2P2 + t3P3 , 0 < t< 1  
-            Vector3 res = ((1 - t) * (1 - t) * (1 - t) * pos0) + (3 * (1 - t) * (1 - t) * t * pos1) + (3 * (1 - t) * (1 - t) * t * pos2) + (t * t * t * pos3);
+            Vector3 res = ((1 - t) * (1 - t) * (1 - t) * pos0) + (3 * (1 - t) * (1 - t) * t * pos1) + (3 * (1 - t) * t * t * pos2) + (t * t * t * pos3);
 
             return new Vector2(res.x, res.y);
         }
